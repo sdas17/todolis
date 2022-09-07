@@ -1,0 +1,9 @@
+<div>
+    <app-todoadd (onAdd) ="handleAdd($event)"
+ 
+    ></app-todoadd>
+    Task Name: {{taskName}}
+</div>
+<div>
+    <app-todolis [task]="taskName"></app-todolis>
+</div>
