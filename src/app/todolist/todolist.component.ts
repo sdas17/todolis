@@ -9,19 +9,19 @@ import { ITodo } from '../Models/todo.models';
 export class TodolistComponent implements OnInit {
 
   //defince a blank array
-  items:ITodo[]=[];
+  items: ITodo[] = [];
   constructor() { }
   taskName: string = '';
   ngOnInit(): void {
   }
   handleAdd(tName: string) {
     this.taskName = tName
-//check duplicate
-//add the items
-this.items.push({
-  task:this.taskName,
-  createdon: new Date()
-});
-console.log(this.items)
+    //check duplicate
+    //add the items
+    this.items.push({
+      task: this.taskName,
+      createdon: new Date()
+    });
+    console.log(this.items)
   }
 }
