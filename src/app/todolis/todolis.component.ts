@@ -16,7 +16,15 @@ export class TodolisComponent implements OnInit {
     // for( let i=0;i<this.items.length ;i++){
 
     // }
-    
+    if (this.items.length ==0) {
+      //sucess/true
+    }else{
+      //false
+    }
+    // if (this.items.length!=0) {
+
+      
+    // }
   }
 
 }

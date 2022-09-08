@@ -1,4 +1,22 @@
+<!--  *ngif :is used to display the html based on the condition  -->
 <div>
-    List {{items.length}}
+    <div *ngIf="items.length ==0">
+        <!-- List {{items.length}} -->
+    <strong>No Task found </strong>
+    </div>
+
+    <!-- Display the list of items if items length is greater than zero -->
+    <!-- *ngFOr:is sued to loop the data -->
+    <!-- for(let obj of items){} -->
+    <!-- .(dot) oprtot is used to access the attribute/property of an object -->
+<div *ngIf="items.length!=0">
+    <div *ngFor="let item of items">
+        {{item.task}}
+        <div>
+            {{item.createdon}}
+        </div>
+    </div>
+
+</div>
 
 </div>
