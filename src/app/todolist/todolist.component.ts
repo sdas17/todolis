@@ -24,4 +24,8 @@ export class TodolistComponent implements OnInit {
     });
     console.log(this.items)
   }
+  handledelter(index:number){
+    //delete the items
+    this.items.splice(index,1);
+  }
 }

@@ -8,12 +8,30 @@
     <!-- Display the list of items if items length is greater than zero -->
     <!-- *ngFOr:is sued to loop the data -->
     <!-- for(let obj of items){} -->
-    <!-- .(dot) oprtot is used to access the attribute/property of an object -->
+    <!-- .(dot) oprtot is used to access the attribute/property of an object 
+         pipe ( | ):pipe is used to change /transform thedata from one format to anotner to another format when we are using the pipe,its not change 
+https://angular.io/api/common/DatePipe
+    -->
+    
 <div *ngIf="items.length!=0">
-    <div *ngFor="let item of items">
+    <!--  loop data-->
+    <div *ngFor="let item of items;let itemIndex=index" class="item">
+        {{itemIndex}}
+        <div>
+            <!--Radio Button-->
+            <input type="radio"/>
+        </div>
+        <div>
+            <!--Task info-->
+        </div>
         {{item.task}}
         <div>
-            {{item.createdon}}
+            {{item.createdon |date :'medium' }}
+        </div>
+        <div>
+            <button>Edit</button>
+<!--Action--><button (click)="handledelte(itemIndex)">Delete</button>
+
         </div>
     </div>
 

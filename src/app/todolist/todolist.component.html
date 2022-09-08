@@ -2,8 +2,8 @@
     <app-todoadd (onAdd) ="handleAdd($event)"
  
     ></app-todoadd>
-    Task Name: {{taskName}}
+    <!-- Task Name: {{taskName}} -->
 </div>
 <div>
-    <app-todolis [items]="items"></app-todolis>
+    <app-todolis [items]="items" (onDelte)="handledelter($event)"></app-todolis>
 </div>

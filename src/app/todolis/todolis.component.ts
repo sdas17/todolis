@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ITodo } from '../Models/todo.models';
 
 @Component({
@@ -10,21 +10,22 @@ export class TodolisComponent implements OnInit {
 //@input is used to define the input attribute
   // @Input() task:string='';
   @Input ()items:ITodo[]=[];
-  constructor() { }
 
+  @Output() onDelte=new EventEmitter<number>();
+
+  constructor() { }
   ngOnInit(): void {
     // for( let i=0;i<this.items.length ;i++){
 
     // }
-    if (this.items.length ==0) {
-      //sucess/true
-    }else{
-      //false
-    }
-    // if (this.items.length!=0) {
-
-      
-    // }
+    
   }
+  handledelte(index:number){
+    // console.log(this.items[index])
+    if (confirm('Do you wantdelete?')) {
+this.onDelte.emit(index)
+      
+    }
 
+  }
 }
