@@ -5,5 +5,5 @@
     <!-- Task Name: {{taskName}} -->
 </div>
 <div>
-    <app-todolis [items]="items" (onDelte)="handledelter($event)"></app-todolis>
+    <app-todolis [items]="items" (onDelte)="handledelter($event) " (onEDIT)="handleedit($event)"></app-todolis>
 </div>

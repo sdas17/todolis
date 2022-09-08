@@ -28,4 +28,7 @@ export class TodolistComponent implements OnInit {
     //delete the items
     this.items.splice(index,1);
   }
+  handleedit(index:number){
+
+  }
 }

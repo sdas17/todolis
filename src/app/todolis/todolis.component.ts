@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ITodo } from '../Models/todo.models';
 
@@ -10,8 +11,10 @@ export class TodolisComponent implements OnInit {
 //@input is used to define the input attribute
   // @Input() task:string='';
   @Input ()items:ITodo[]=[];
-
+//Delete event
   @Output() onDelte=new EventEmitter<number>();
+//EDIT EVENT
+@Output() onEDIT=new EventEmitter<number>();
 
   constructor() { }
   ngOnInit(): void {
@@ -26,6 +29,11 @@ export class TodolisComponent implements OnInit {
 this.onDelte.emit(index)
       
     }
+
+  }
+  handldELETE(index:number){
+    // console.log(this.items[index])
+   this.onEDIT.emit(index)
 
   }
 }
