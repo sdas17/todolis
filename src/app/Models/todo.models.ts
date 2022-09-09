@@ -6,4 +6,9 @@ export interface ITodo{
     createdon:Date;
 
 }
+export interface ITodoEdit{
+    item:ITodo;
+    index:number;
+}
+
 //orm-pojo-modal-response

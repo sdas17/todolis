@@ -1,8 +1,7 @@
 <div>
-    <app-todoadd (onAdd) ="handleAdd($event)"
- 
-    ></app-todoadd>
+    <app-todoadd (onAdd)="handleAdd($event)" *ngIf="!editItem"></app-todoadd>
     <!-- Task Name: {{taskName}} -->
+    <app-totoedit [editItem]="editItem" *ngIf="editItem" (onUpdate)="handleUpdate($event)"></app-totoedit>
 </div>
 <div>
     <app-todolis [items]="items" (onDelte)="handledelter($event) " (onEDIT)="handleedit($event)"></app-todolis>
